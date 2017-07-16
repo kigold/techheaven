@@ -595,6 +595,13 @@
                 </article><!-- News block -->
               </div>
             </div>
+           
+            <div class="row"> <!-- add article modal trigger -->
+              <div class="col-md-12">
+                  <div class="btn btn-success" data-toggle="modal" data-target="#myModal"> Add Article
+                  </div>
+              </div>  
+            </div> <!--/ add article modal triger -->
 
           </div><!-- .admag-block -->
 
@@ -1205,6 +1212,42 @@
 <div id="go-top-button" class="fa fa-angle-up" title="Scroll To Top"></div>
 
 <div class="mobile-overlay" id="mobile-overlay"></div>
+<!-- Modal -->
+   <form action="blog.php" method="post" enctype="multipart/form-data">      
+      <script src="js/tinymce/tinymce.min.js"></script>
+      <script>tinymce.init({ mode:'exact',
+        selector : 'textarea.editor'
+     });</script>
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Create New Article</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="form-group">
+                      <label for="title">Title</label>
+                      <input required="required" type="text" class="form-control" id="title" name="title" aria-describedby="fileHelp">
+                      
+                  </div>            
+                   <textarea required="required" id="blog" name="blog" class="editor"></textarea>
+                   Select image to upload:
+                  <input type="file" name="upload" id="upload">
+                    
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+          <!-- /Modal content -- >
+
+          </div>
+        </div>
+<!-- /Modal  -->
 
 
 
